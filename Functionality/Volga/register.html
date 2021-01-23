@@ -1,0 +1,421 @@
+<!-- This page shows the Register webpage -->
+
+<!DOCTYPE html>
+<!-- Start of the html document -->
+<html lang="en">
+<!-- Head section of the html document -->
+<!-- Present what is going to be on the tab -->
+<head>
+  <title>Registration</title>
+  <link href="main.css" rel="stylesheet" type="text/css">
+  <meta charset="utf-8">
+  <meta name="registration" content="this is a page for registration">
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="form.js"></script>
+  <script type="text/javascript" src="help.js"></script>
+
+  <style>
+    span {
+      color: red;
+    }
+
+    table {
+      display: inline-block;
+      width: 80%;
+      padding-left: 20%;
+    }
+
+    td {
+      width: 15%;
+      text-align: center;
+    }
+
+
+  </style>
+
+</head>
+<!-- Body part of the html document -->
+<body class="bod">
+<header>
+  <div class="logoSection">
+    <!-- logo of the bookstore-->
+    <a href="mainPage.html">
+      <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSXxTVzsmR0TKvx-wGe5XNiAJdtgew-LGVMwylGHQaxi6Rvy1w&s" width="500"
+           height="200"
+           alt="logo">
+    </a>
+    <br>
+
+    <div class="nav">
+      <!-- the navigation menu-->
+      <strong>Navigation Menu</strong>
+      <nav class="navigation">
+        <a href="mainPage.html#subheading1">Books on Sale</a>
+        <br>
+        <a href="mainPage.html#subheading2">Popular Books</a>
+        <br>
+        <a href="mainPage.html#subheading3">Categories</a>
+      </nav>
+    </div>
+
+    <!-- a link for user to log in-->
+    <div class="loginAndreg">
+      <strong>Users</strong>
+      <nav>
+        <a href="LogIn.html"><em>Users Log In</em></a>
+        <br>
+        <!-- a link for user to register-->
+        <a href="register.html"><em>Register</em></a>
+        <br>
+      </nav>
+    </div>
+
+  </div>
+</header>
+<br><br><br><br>
+
+<hr>
+<div class="backgroundcolor">
+
+  <!-- header of the website-->
+  <h1 class="heading text">Volga Account Registration</h1>
+
+  <!-- instructions placeholder-->
+  <p style="border: 3px solid red;text-align: center" id="instructions">Instructions Place</p>
+
+  <!-- the registration form for users to fill out-->
+  <div style="text-align: center;">
+    <form name="frmRegistration" id="frmRegistration">
+      <!-- Account ID & Password -->
+      <h2>Account ID &amp; Password</h2>
+      <table>
+        <tr>
+          <td>
+            <label for="txtEmailAddress">Email address: </label>
+          </td>
+          <td>
+            <input type="text" name="txtEmailAddress" id="txtEmailAddress"
+                   maxlength="64" size="20" placeholder="Example@domin.com" class="notEmpty" autofocus required/>
+          </td>
+          <td>
+            <span id="emailSpan"></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="txtConfirmEmailAddress">Confirm email address: </label>
+          </td>
+          <td>
+            <input type="text" name="txtConfirmEmailAddress" id="txtConfirmEmailAddress"
+                   maxlength="64" size="20" placeholder="Example@domin.com" class="notEmpty" required/>
+          </td>
+          <td>
+            <span id="confirmEmailSpan"></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="txtPassword">Password: </label>
+          </td>
+          <td>
+            <input type="password" name="txtPassword" id="txtPassword"
+                   maxlength="64" size="20" placeholder="password" class="notEmpty" required/>
+          </td>
+          <td>
+            <span id="passwordSpan"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="txtConfirmPassword">Confirm password: </label>
+          </td>
+          <td>
+            <input type="password" name="txtConfirmPassword" id="txtConfirmPassword"
+                   maxlength="64" size="20" placeholder="same password" class="notEmpty"  required/>
+          </td>
+          <td>
+            <span id="confirmPasswordSpan"></span>
+          </td>
+        </tr>
+      </table>
+      <!-- User Information -->
+
+      <h2>User Information</h2>
+
+      <table>
+        <tr>
+          <td>
+            <label for="txtFirstName">First name:</label>
+          </td>
+          <td>
+            <input type="text" name="txtFirstName" id="txtFirstName" placeholder="First Name" class="notEmpty" required/>
+          </td>
+          <td>
+            <span id="firstNameSpan"></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="txtLastName">Last name:</label>
+          </td>
+          <td>
+            <input type="text" name="txtLastName" id="txtLastName" placeholder="Last Name" class="notEmpty" required/>
+          </td>
+          <td>
+            <span id="lastNameSpan"></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="txtAddress"> Address:</label>
+          </td>
+          <td>
+            <input type="text" name="txtAddress" id="txtAddress" placeholder="Address" class="notEmpty" required/>
+          </td>
+          <td>
+            <span id="addressSpan"></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="txtAddress2"> Address2:</label>
+          </td>
+          <td>
+            <input type="text" name="txtAddress2" id="txtAddress2" placeholder="Optional"/>
+          </td>
+          <td>
+            <span id="address2Span"></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="txtCity">City:</label>
+          </td>
+          <td>
+            <input type="text" name="txtCity" id="txtCity" placeholder="City" class="notEmpty" required>
+          </td>
+          <td>
+            <span id="citySpan"></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="selState">State:</label>
+          </td>
+          <td>
+            <select type="select" style="float: right" name="selState" id="selState" placeholder="state" class="notEmpty" required>
+              <option value="" selected="selected">--Select a State--</option>
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="AR">Arkansas</option>
+              <option value="CA">California</option>
+              <option value="CO">Colorado</option>
+              <option value="CT">Connecticut</option>
+              <option value="DE">Delaware</option>
+              <option value="DC">District Of Columbia</option>
+              <option value="FL">Florida</option>
+              <option value="GA">Georgia</option>
+              <option value="HI">Hawaii</option>
+              <option value="ID">Idaho</option>
+              <option value="IL">Illinois</option>
+              <option value="IN">Indiana</option>
+              <option value="IA">Iowa</option>
+              <option value="KS">Kansas</option>
+              <option value="KY">Kentucky</option>
+              <option value="LA">Louisiana</option>
+              <option value="ME">Maine</option>
+              <option value="MD">Maryland</option>
+              <option value="MA">Massachusetts</option>
+              <option value="MI">Michigan</option>
+              <option value="MN">Minnesota</option>
+              <option value="MS">Mississippi</option>
+              <option value="MO">Missouri</option>
+              <option value="MT">Montana</option>
+              <option value="NE">Nebraska</option>
+              <option value="NV">Nevada</option>
+              <option value="NH">New Hampshire</option>
+              <option value="NJ">New Jersey</option>
+              <option value="NM">New Mexico</option>
+              <option value="NY">New York</option>
+              <option value="NC">North Carolina</option>
+              <option value="ND">North Dakota</option>
+              <option value="OH">Ohio</option>
+              <option value="OK">Oklahoma</option>
+              <option value="OR">Oregon</option>
+              <option value="PA">Pennsylvania</option>
+              <option value="RI">Rhode Island</option>
+              <option value="SC">South Carolina</option>
+              <option value="SD">South Dakota</option>
+              <option value="TN">Tennessee</option>
+              <option value="TX">Texas</option>
+              <option value="UT">Utah</option>
+              <option value="VT">Vermont</option>
+              <option value="VA">Virginia</option>
+              <option value="WA">Washington</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming</option>
+            </select>
+          </td>
+          <td>
+            <span id="stateSpan"></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="txtZip">Zip code:</label>
+          </td>
+          <td>
+            <input type="text" name="txtZip" id="txtZip" placeholder="US zip code" class="notEmpty" required/>
+          </td>
+          <td>
+            <span id="zipSpan"></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="txtPhone">Telephone number:</label>
+          </td>
+          <td>
+            <input type="text" name="txtPhone" id="txtPhone" placeholder="Phone number" class="notEmpty" required/>
+          </td>
+          <td>
+            <span id="phoneSpan"></span>
+          </td>
+        </tr>
+      </table>
+
+      <!-- Billing Information -->
+
+      <h2>Billing Information</h2>
+      <table>
+
+        <tr>
+          <td>
+            <label for="selCCType">Card Type:</label>
+          </td>
+          <td>
+            <select type="select" style="float: right" name="card" id="selCCType" placeholder="Card type" class="notEmpty" required>
+              <option value="" selected="selected">--Select a Card--</option>
+              <option>Visa</option>
+              <option>Master Card</option>
+              <option>Discover</option>
+              <option>American Express</option>
+            </select>
+          </td>
+          <td>
+            <span id="cardTypeSpan"></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="txtCCNumber">Credit card number:</label>
+          </td>
+          <td>
+            <input type="text" name="txtCCNumber" id="txtCCNumber" placeholder="card number" class="notEmpty" required/>
+          </td>
+          <td>
+            <span id="crdNumSpan"></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="txtCCName">Credit card holder name:</label>
+          </td>
+          <td>
+            <input type="text" name="txtCCName" id="txtCCName" placeholder="holder name" class="notEmpty" required/>
+          </td>
+          <td>
+            <span id="crdNameSpan"></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="ExpMon">Expiration Month:</label>
+          </td>
+          <td>
+            <select type="select " style="float: right" name="ExpMon" id="ExpMon" placeholder="Expire month" class="notEmpty" required>
+              <option value="" selected="selected">--Select a Month--</option>
+              <option>January</option>
+              <option>February</option>
+              <option>March</option>
+              <option>April</option>
+              <option>May</option>
+              <option>June</option>
+              <option>July</option>
+              <option>August</option>
+              <option>September</option>
+              <option>October</option>
+              <option>November</option>
+              <option>December</option>
+            </select>
+          </td>
+          <td>
+            <span id="monthSpan"></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="ExpYear">Expiration Year:</label>
+          </td>
+          <td>
+            <select type="select" style="float: right" name="ExpYear" id="ExpYear" placeholder="Expire year" class="notEmpty" required>
+              <option value="" selected="selected">--Select a Year--</option>
+              <option> 2020</option>
+              <option> 2021</option>
+              <option> 2022</option>
+              <option> 2023</option>
+              <option> 2024</option>
+              <option> 2025</option>
+              <option> 2026</option>
+            </select>
+          </td>
+          <td>
+            <span id="yearSpan"></span>
+          </td>
+        </tr>
+
+      </table>
+      <p class="text"><input style="float: none" type="submit" id="Register" value="Register"/>
+        <input style="float: none" type="reset" value="Clear" id="clear"/></p>
+
+    </form>
+  </div>
+
+  <!-- footer of the webpage-->
+  <footer class="footerSUB">
+    <hr>
+    <pre style="text-align:center">
+  <a href="AboutUs.html">About us</a>              <a href="News.html">News</a>              <a href="NewArrivals.html">New Arrivals</a>
+  </pre>
+  </footer>
+
+  <p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+      <img style="border:0;width:88px;height:31px"
+           src="http://jigsaw.w3.org/css-validator/images/vcss"
+           alt="Valid CSS!"/>
+    </a>
+  </p>
+</div>
+</body>
+
+<!-- End of the html document -->
+</html>
